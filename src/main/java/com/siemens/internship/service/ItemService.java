@@ -71,7 +71,7 @@ public class ItemService {
 
    @Async
    public CompletableFuture<List<Item>> processItemsAsync() {
-       //The method retrieves now only the IDs for memory-efficiency
+       //The method now retrieves only the IDs for memory-efficiency
     List<Long> itemIds = itemRepository.findAllIds();
     List<CompletableFuture<Void>> futures = new ArrayList<>();
 
